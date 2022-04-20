@@ -50,45 +50,43 @@ const App = () => {
                 position="img-text"
                 onClick={toggleFeatures}
               />
-              <li>
-                <ul
-                  className={`v-navbar dropdown ${
-                    dropdownStatus.dropdownFeatures && 'hidden'
-                  }`}
-                >
-                  <li>
-                    <IconLink
-                      icon={icons.todo}
-                      alt="Todo link"
-                      text="Todo List"
-                    />
-                  </li>
-                  <li>
-                    {' '}
-                    <IconLink
-                      icon={icons.calendar}
-                      alt="Calendar link"
-                      text="Calendar"
-                    />
-                  </li>
-                  <li>
-                    {' '}
-                    <IconLink
-                      icon={icons.reminders}
-                      alt="Reminders link"
-                      text="Reminders"
-                    />
-                  </li>
-                  <li>
-                    {' '}
-                    <IconLink
-                      icon={icons.planning}
-                      alt="Planning link"
-                      text="Planning"
-                    />
-                  </li>
-                </ul>
-              </li>
+              <ul
+                className={`v-navbar dropdown ${
+                  dropdownStatus.dropdownFeatures && 'hidden'
+                }`}
+              >
+                <li>
+                  <IconLink
+                    icon={icons.todo}
+                    alt="Todo link"
+                    text="Todo List"
+                  />
+                </li>
+                <li>
+                  {' '}
+                  <IconLink
+                    icon={icons.calendar}
+                    alt="Calendar link"
+                    text="Calendar"
+                  />
+                </li>
+                <li>
+                  {' '}
+                  <IconLink
+                    icon={icons.reminders}
+                    alt="Reminders link"
+                    text="Reminders"
+                  />
+                </li>
+                <li>
+                  {' '}
+                  <IconLink
+                    icon={icons.planning}
+                    alt="Planning link"
+                    text="Planning"
+                  />
+                </li>
+              </ul>
             </li>
             <li>
               <IconLink
@@ -100,24 +98,22 @@ const App = () => {
                 position="img-text"
                 onClick={toggleCompany}
               />
-              <li>
-                <ul
-                  className={`v-navbar dropdown ${
-                    dropdownStatus.dropdownCompany && 'hidden'
-                  }`}
-                >
-                  <li>
-                    {' '}
-                    <button>History</button>
-                  </li>
-                  <li>
-                    <button>Our team</button>
-                  </li>
-                  <li>
-                    <button>Blog</button>
-                  </li>
-                </ul>
-              </li>
+              <ul
+                className={`v-navbar dropdown ${
+                  dropdownStatus.dropdownCompany && 'hidden'
+                }`}
+              >
+                <li>
+                  {' '}
+                  <button>History</button>
+                </li>
+                <li>
+                  <button>Our team</button>
+                </li>
+                <li>
+                  <button>Blog</button>
+                </li>
+              </ul>
             </li>
             <li>
               <button>Careers</button>

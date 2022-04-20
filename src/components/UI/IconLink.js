@@ -1,20 +1,20 @@
 import React from 'react';
 
 const IconLink = ({ icon, alt, text, position, onClick }) => {
-  const layout =
+  const renderLayout =
     position && position === 'img-text' ? (
-      <div>
+      <button onClick={onClick}>
         {text}
         <img src={icon} className="link-icon" alt={alt} />
-      </div>
+      </button>
     ) : (
-      <div>
+      <button onClick={onClick}>
         <img src={icon} className="link-icon" alt={alt} />
         {text}
-      </div>
+      </button>
     );
 
-  return <button onClick={onClick}>{layout}</button>;
+  return renderLayout;
 };
 
 export default IconLink;

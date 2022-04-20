@@ -30,77 +30,65 @@ const Navbar = ({ openSideBar }) => {
           <img src={icons.logo} alt="Snap" />
         </button>
       </li>
-      <div className="collapse">
-        <li className="navlink dropdown">
-          <button onClick={toggleFeaturesDd} className="dropbtn">
-            Features
-            <img
-              className="dd-icon"
-              src={dropdowns.features ? icons.dropup : icons.dropdown}
-              alt={`${
-                dropdowns.features ? 'dropup' : 'dropdown'
-              } arrow for features`}
-            />
-          </button>
-          <div className={`dropdown-content ${dropdowns.features && 'active'}`}>
-            <IconLink icon={icons.todo} alt="Todo link" text="Todo List" />
-            <IconLink
-              icon={icons.calendar}
-              alt="Calendar link"
-              text="Calendar"
-            />
-            <IconLink
-              icon={icons.reminders}
-              alt="Reminders link"
-              text="Reminders"
-            />
-            <IconLink
-              icon={icons.planning}
-              alt="Planning link"
-              text="Planning"
-            />
-          </div>
-        </li>
-        <li className="navlink dropdown">
-          <button onClick={toggleCompanyDd} className="dropbtn">
-            Company
-            <img
-              className="dd-icon"
-              src={dropdowns.company ? icons.dropup : icons.dropdown}
-              alt={`${
-                dropdowns.company ? 'dropup' : 'dropdown'
-              } arrow for features`}
-            />
-          </button>
-          <div className={`dropdown-content ${dropdowns.company && 'active'}`}>
-            <button>History</button>
-            <button>Our team</button>
-            <button>Blog</button>
-          </div>
-        </li>
-        <li className="navlink">
-          <button>Careers</button>
-        </li>
-        <li className="navlink">
-          <button>About</button>
-        </li>
-        <li className="navlink">
-          <button>Careers</button>
-        </li>
-      </div>
+      <li className="navlink dropdown collapse">
+        <button onClick={toggleFeaturesDd} className="dropbtn">
+          Features
+          <img
+            className="dd-icon"
+            src={dropdowns.features ? icons.dropup : icons.dropdown}
+            alt={`${
+              dropdowns.features ? 'dropup' : 'dropdown'
+            } arrow for features`}
+          />
+        </button>
+        <div className={`dropdown-content ${dropdowns.features && 'active'}`}>
+          <IconLink icon={icons.todo} alt="Todo link" text="Todo List" />
+          <IconLink icon={icons.calendar} alt="Calendar link" text="Calendar" />
+          <IconLink
+            icon={icons.reminders}
+            alt="Reminders link"
+            text="Reminders"
+          />
+          <IconLink icon={icons.planning} alt="Planning link" text="Planning" />
+        </div>
+      </li>
+      <li className="navlink dropdown collapse">
+        <button onClick={toggleCompanyDd} className="dropbtn">
+          Company
+          <img
+            className="dd-icon"
+            src={dropdowns.company ? icons.dropup : icons.dropdown}
+            alt={`${
+              dropdowns.company ? 'dropup' : 'dropdown'
+            } arrow for features`}
+          />
+        </button>
+        <div className={`dropdown-content ${dropdowns.company && 'active'}`}>
+          <button>History</button>
+          <button>Our team</button>
+          <button>Blog</button>
+        </div>
+      </li>
+      <li className="navlink collapse">
+        <button>Careers</button>
+      </li>
+      <li className="navlink collapse">
+        <button>About</button>
+      </li>
+      <li className="navlink collapse">
+        <button>Careers</button>
+      </li>
       <li className="navlink right collapse-menu">
         <button onClick={openSideBar}>
           <img src={icons.iconMenu} alt="Open the sidebar" />
         </button>
       </li>
-      <div className="collapse">
-        <li className="navlink right bordered">
-          <button>Register</button>
-        </li>
-        <li className="navlink right">
-          <button>Login</button>
-        </li>
-      </div>
+      <li className="navlink right bordered collapse">
+        <button>Register</button>
+      </li>
+      <li className="navlink right collapse">
+        <button>Login</button>
+      </li>
     </ul>
   );
 };
