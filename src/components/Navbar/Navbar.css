@@ -1,0 +1,83 @@
+.navbar {
+  list-style-type: none;
+  overflow: hidden;
+  background-color: transparent;
+  padding-top: 20px;
+  padding-right: 10px;
+}
+
+.navlink {
+  float: left;
+}
+
+.navlink button,
+.dropbtn {
+  display: block;
+  padding: 14px 16px;
+  color: hsl(0, 0%, 41%);
+  background-color: transparent;
+  text-decoration: none;
+  cursor: pointer;
+  border: none;
+}
+
+.navlink button:hover {
+  color: hsl(0, 0%, 8%);
+}
+
+.navlink.right {
+  float: right;
+}
+
+.navlink.right.bordered {
+  border: 1px solid hsl(0, 0%, 8%);
+  border-radius: 24px;
+}
+
+.dd-icon {
+  margin-left: 10px;
+}
+
+.link-icon {
+  margin-right: 10px;
+}
+
+.navlink.dropdown {
+  display: inline-block;
+}
+
+.dropdown-content {
+  position: absolute;
+  min-width: 160px;
+  z-index: 1;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  border-radius: 12px;
+  background-color: hsl(0, 0%, 98%);
+  display: none;
+}
+
+.dropdown-content button {
+  display: block;
+  text-decoration: none;
+  margin-left: 10px;
+  padding: 12px 16px;
+  color: hsl(0, 0%, 41%);
+}
+
+.active {
+  display: block;
+}
+
+.collapse-menu {
+  display: none;
+}
+
+@media screen and (max-width: 900px) {
+  .collapse-menu {
+    display: block;
+  }
+
+  .collapse {
+    display: none;
+  }
+}

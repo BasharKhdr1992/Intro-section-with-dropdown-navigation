@@ -1,38 +1,181 @@
-.App {
-  text-align: center;
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Epilogue';
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.wrapper {
+  background-color: hsl(0, 0%, 98%);
+  height: 100vh;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.overlay {
+  background-color: rgba(105, 105, 105, 0.5);
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  z-index: 1;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.sidebar {
+  height: 100%;
+  width: 60%;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  display: block;
+  background-color: hsl(0, 0%, 98%);
+}
+
+.hidden {
+  display: none;
+}
+
+.close-menu {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+
+.close-menu-btn {
+  padding: 12px 16px;
+  background-color: hsl(0, 0%, 98%);
+  border: none;
+  cursor: pointer;
+}
+
+.v-navbar {
+  list-style-type: none;
+  width: 100%;
+}
+
+.v-navbar button {
+  display: block;
+  padding: 14px 16px;
+  color: hsl(0, 0%, 41%);
+  text-decoration: none;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.v-navbar button img {
+  margin-left: 10px;
+}
+
+.v-navbar button:hover {
+  color: hsl(0, 0%, 8%);
+}
+
+.v-navbar.dropdown {
+  margin-left: 20px;
+}
+
+.intro-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.intro-text {
+  display: flex;
+  width: 40%;
+  flex-direction: column;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.intro-text h1 {
+  font-size: 78px;
+  font-weight: 700;
+  margin-bottom: 40px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.intro-text p {
+  color: hsl(0, 0%, 41%);
+  font-size: 18px;
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+
+.intro-text .button {
+  display: block;
+  padding: 12px 16px;
+  align-self: flex-start;
+  color: hsl(0, 0%, 98%);
+  border-color: hsl(0, 0%, 8%);
+  background-color: hsl(0, 0%, 8%);
+  border-radius: 16px;
+  cursor: pointer;
+}
+
+.intro-text .button:hover {
+  color: hsl(0, 0%, 8%);
+  background-color: hsl(0, 0%, 98%);
+}
+
+.intro-image {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.intro-image img {
+  width: 70%;
+  height: 100%;
+}
+
+.clients {
+  display: flex;
+  flex-direction: row;
+  margin-top: 20px;
+  justify-content: space-between;
+}
+
+.client-img-container {
+  width: 20%;
+}
+
+.client-img-container img {
+  width: 100%;
+}
+
+@media screen and (max-width: 900px) {
+  .wrapper {
+    height: max-content;
   }
-  to {
-    transform: rotate(360deg);
+
+  .overlay {
+    height: 200vh;
+  }
+
+  .intro-container {
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+
+  .intro-text {
+    width: 90%;
+    align-items: center;
+  }
+
+  .intro-text .button {
+    align-self: center;
+  }
+
+  .intro-text h1,
+  .intro-text p {
+    text-align: center;
+  }
+
+  .intro-image {
+    width: 90%;
+    margin-bottom: 20px;
+  }
+  .intro-image img {
+    width: 100%;
   }
 }
